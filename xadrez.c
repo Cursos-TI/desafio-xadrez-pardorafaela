@@ -47,5 +47,27 @@ int main() {
         j++;
     }
 
+    // -------------------------------------------------------
+    // Implementação de Movimentação do Cavalo
+    // O Cavalo move-se em "L": 2 casas para baixo e 1 casa para a esquerda.
+    // Loops aninhados: o loop externo (FOR) controla a etapa vertical (2 casas para baixo),
+    // e o loop interno (WHILE) controla a etapa horizontal (1 casa para a esquerda).
+    // O loop interno só executa na última iteração do externo, garantindo o formato em "L".
+    // -------------------------------------------------------
+    int casasCavaloVertical = 2;    // número de casas para baixo
+    int casasCavaloHorizontal = 1;  // número de casas para a esquerda
+
+    printf("\nCavalo:\n");
+    for (int v = 1; v <= casasCavaloVertical; v++) {
+        printf("Baixo\n");
+
+        // Após concluir o movimento vertical, executa o deslocamento horizontal
+        int h = 0;
+        while (v == casasCavaloVertical && h < casasCavaloHorizontal) {
+            printf("Esquerda\n");
+            h++;
+        }
+    }
+
     return 0;
 }
